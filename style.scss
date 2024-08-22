@@ -259,7 +259,9 @@ main{
 }
 
 .ourworks{
-  margin-top: 300px;
+  max-width: 1239px;
+  margin-top: 122px;
+  margin-bottom: 212px;
   .ourworks__content{
     margin-bottom: 56px;
     max-width: 667px;
@@ -274,10 +276,15 @@ main{
     display: flex;
     gap: 0 30px;
     .ourworks__item{
-      width: 393px;
+      max-width: 593px;
       height: 439px;
       border-radius: 10px;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+      
+      img{
+        width: 100%;
+      }
+
       .ourworks__item__txt{
         margin: 24px;
         display: flex;
@@ -303,26 +310,20 @@ main{
 }
 
 .clients{
-  max-width: 1240px;
-  height: 917px;
+  padding: 85px 67px 85px 81px;
   background-color: #0B7572;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  img{
-    max-width: 747px;
-    width: 100%;
-    object-fit: contain;
-    height: 747px;
+  gap: 0 20px;
+  .clients__right{
+    margin-right: 67px;
+    img{
+      width: 100%;
+    }
   }
 
   .clients__content{
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 100%;
+    flex: 1;
     h2{
-      margin-top: 100px;
       max-width: 477px;
       color: #fff;
     }
@@ -369,7 +370,7 @@ main{
   margin-top: 120px;
   .logos__wrapper{
     display: grid;
-    grid-template-columns: repeat(4, 317px);
+    grid-template-columns: repeat(4, 1fr  );
     grid-template-rows: repeat(2,183px);
     gap: 80px 0;
     margin-top: 90px;
@@ -384,6 +385,7 @@ main{
       }
       p{
         margin-top: 14px;
+        text-align: center;
       }
     }
   }
@@ -395,7 +397,7 @@ main{
   .team__wrapper{
     margin-top: 72px;
     display: grid;
-    grid-template-columns: repeat(2, 605px);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 210px);
     gap: 24px 30px;
 
@@ -404,17 +406,19 @@ main{
       overflow: hidden;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 0 40px;
-      position: relative;
+      gap: 0 32px;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+      .vay{
+        display: flex;
+        align-items: center;
+        gap: 0 40px;
+      }
+      
       .green{
         width: 51px;
         height: 100%;
         background-color: #0B7572;
-        position: absolute;
-        left: 0;
-        top: 0;
       }
 
       .team__item__content{
@@ -498,6 +502,12 @@ main{
   }
 }
 
+@media only screen and (max-width: 1073px){
+  .ourworks{
+    margin-top: 350px;
+  }
+}
+
 @media only screen and (max-width: 768px){
     main{
         flex-direction: column;
@@ -517,7 +527,8 @@ main{
         }
 
         .main__img{
-            width: 690px;
+            max-width: 690px;
+            width: 100%;
             height: 314px;
             background-image: url(../images/2truckstablet.jpg);
         }
@@ -705,8 +716,9 @@ main{
 
     .ourworks{
       margin-top: 400px;
-      width: 690px;
+      max-width: 690px;
       height: 1036px;
+      mari
       .ourworks__content{
         margin-bottom: 56px;
         max-width: 667px;
@@ -724,11 +736,11 @@ main{
         .ourworks__item{
           max-width: 690px;
           width: 100%;
-          height: 422px;
           border-radius: 10px;
           box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
           img{
             opacity: 0;
+            height: 247px;
           }
 
           background-image: url(../images/Rectangle\ 13.png);
@@ -742,7 +754,6 @@ main{
             display: none;
           }
           .ourworks__item__txt{
-            margin: 24px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -781,10 +792,8 @@ main{
       }
     
       .clients__content{
-        margin-left: 39px;
         h2{
           margin-top: 100px;
-          margin-left: 18px;
           margin-bottom: 48px;
           max-width: 477px;
           color: #fff;
@@ -841,7 +850,7 @@ main{
       margin-top: 120px;
       .logos__wrapper{
         display: grid;
-        grid-template-columns: repeat(2, 317px);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4,183px);
         gap: 80px 0;
         margin-top: 90px;
@@ -871,20 +880,21 @@ main{
       .team__wrapper{
         margin-top: 72px;
         display: grid;
-        grid-template-columns: repeat(2, 330px);
-        grid-template-rows: repeat(2, 289px);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 295px);
         gap: 24px 30px;
     
         .team__item{
           border-radius: 10px;
           overflow: hidden;
           display: flex;
-          flex-direction: column;
           align-items: center;
-          justify-content: center;
-          gap: 0 40px;
-          position: relative;
+          gap: 0 30px;
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+          .vay{
+            flex-direction: column;
+          }
 
           &:nth-child(5){
             display: none;
@@ -898,13 +908,11 @@ main{
             width: 51px;
             height: 100%;
             background-color: #0B7572;
-            position: absolute;
-            left: 0;
-            top: 0;
           }
 
           img{
             margin-bottom: 15px;
+            max-width: 100px;
           }
     
           .team__item__content{
@@ -1233,11 +1241,12 @@ main{
         gap: 32px 30px;
         .ourworks__item{
           max-width: 345px;
-          height: 394px;
+          padding-bottom: 10px;
           border-radius: 10px;
           box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
           img{
             opacity: 0;
+            height: 222px;
           }
 
           background-image: url(../images/Rectangle\ 13\ \(1\).png);
@@ -1355,7 +1364,7 @@ main{
       }
       .logos__wrapper{
         display: grid;
-        grid-template-columns: repeat(2, 173px);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 176px);
         gap: 80px 0;
         margin-top: 90px;
@@ -1411,7 +1420,7 @@ main{
       .team__wrapper{
         margin-top: 72px;
         display: grid;
-        grid-template-columns: repeat(1, 345px);
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 156px);
         gap: 24px 30px;
     
@@ -1425,6 +1434,14 @@ main{
           gap: 0 40px;
           position: relative;
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+          .vay{
+            flex-direction: row;
+
+            img{
+              max-width: 100px;
+            }
+          }
 
           &:nth-child(4){
             display: none;
