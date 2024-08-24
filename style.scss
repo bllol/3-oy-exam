@@ -69,6 +69,7 @@ main{
         width: 635px;
         height: 505px;
         background-image: url(../images/2trucks.jpg);
+        border-radius: 10px;
     }
 }
 
@@ -551,6 +552,7 @@ main{
             width: 100%;
             height: 314px;
             background-image: url(../images/2truckstablet.jpg);
+            border-radius: 10px;
         }
     }
 
@@ -1147,6 +1149,98 @@ main{
   }
 }
 
+@media only screen and (max-width: 500px){
+  .team{
+    margin-top: 130px;
+
+    h2{
+      font-size: 28px;
+    }
+  
+    .team__wrapper{
+      margin-top: 72px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 156px);
+      gap: 24px 30px;
+  
+      .team__item{
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0 40px;
+        position: relative;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        padding-bottom: 20px;
+
+        .vay{
+          flex-direction: row;
+
+          img{
+            max-width: 100px;
+          }
+        }
+
+        &:nth-child(4){
+          display: none;
+        }
+
+        &:nth-child(5){
+          display: none;
+        }
+
+        &:nth-child(6){
+          display: none;
+        }
+
+        .green{
+          width: 20px;
+          height: 100%;
+          background-color: #0B7572;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        img{
+          margin-bottom: 15px;
+          margin-left: 32px;
+        }
+  
+        .team__item__content{
+          b{
+            font-size: 18px;
+            max-width: 165px;
+            height: 18px;
+            margin-top: 10px;
+          }
+          
+          p{
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FFCE50;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+          }
+  
+          .sociallogos{
+            display: flex;
+            gap: 0 20px;
+            i{
+              font-size: 22px;
+              color: #BFBFC7;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  } 
+}
+
 @media only screen and (max-width: 375px){
     main{
         flex-direction: column;
@@ -1171,6 +1265,7 @@ main{
             max-width: 345px;
             height: 253px;
             background-image: url(../images/2trucksphone.jpg);
+            border-radius: 10px;
         }
     }
 
@@ -1442,8 +1537,10 @@ main{
       align-items: center;
       justify-content: center;
       margin-top: 120;
+      height: 640px;
       
       .clients__right{
+        margin-right: 0px;
         img{
           display: none;
         }
@@ -1464,8 +1561,8 @@ main{
           max-width: 445px;
           margin-left: 0px;
           color: #fff;
-          text-align: center;
-          font-size: 24px;
+          text-align: left;
+          font-size: 20px;
         }
       }
     }
@@ -1474,7 +1571,7 @@ main{
       margin-top: 120px;
       height: 860px;
       h2{
-        font-size: 28 px;
+        font-size: 28px;
       }
       .steps__item__wrapper{
         margin-top: 48px;
@@ -1504,6 +1601,7 @@ main{
               padding-bottom: 0;
               width: 0;
               border-bottom: 0px;
+              font-size: 18px;
             }
     
             p{
@@ -1546,6 +1644,11 @@ main{
           img{
             margin-bottom: 32px;
           }
+
+          .gazprom__logo{
+            width: 120px;
+          }
+
           p{
             margin-top: 14px;
           }
@@ -1593,8 +1696,7 @@ main{
           gap: 0 40px;
           position: relative;
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-          padding-bottom: 30px;
-          padding-top: 10px;
+          padding-bottom: 20px;
 
           .vay{
             flex-direction: row;
@@ -1631,11 +1733,19 @@ main{
           }
     
           .team__item__content{
-            p{
-              padding-bottom: 16px;
-              border-bottom: 3px solid #FFCE50;
+            b{
+              font-size: 15px;
+              max-width: 165px;
+              height: 18px;
               margin-top: 10px;
-              margin-bottom: 35px;
+            }
+            
+            p{
+              padding-bottom: 10px;
+              border-bottom: 3px solid #FFCE50;
+              margin-top: 5px;
+              margin-bottom: 15px;
+              font-size: 14px;
             }
     
             .sociallogos{
