@@ -1122,6 +1122,71 @@ main{
       }
     }
   }
+
+  .contacts{
+    margin-top: 116px;
+    h2{
+      font-size: 28px;
+    }
+
+    .contacts__wrapper{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-top: 72px;
+      .sources{
+        display: grid;
+        grid-template-columns: 239px;
+        grid-template-rows: repeat(4, 43px);
+        gap: 44px 0;
+        
+        .sources__item{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 0 32px;
+          i{
+            font-size: 23px;
+            color: #0B7572;
+          }
+        }
+      }
+  
+      .info-table {
+        max-width: 100%;
+        background-color: #F9F9FB;
+        padding: 20px;
+        border-radius: 5px;
+        
+        .row {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          padding: 10px 0;
+          border-bottom: 1px solid #e0e0e0;
+          gap: 14px 0;
+      
+          &:last-child {
+            border-bottom: none;
+          }
+      
+          .label {
+            /* font-weight: bold; */
+            color: #333;
+            text-align: left;
+          }
+      
+          .value {
+            color: #666;
+            text-align: left;
+            font-weight: lighter;
+            max-width: 443px;
+            margin-right: 90px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 500px){
@@ -1246,10 +1311,42 @@ main{
       }
     }
   }
+
+  .contacts{
+    margin-top: 116px;
+    h2{
+      font-size: 28px;
+    }
+
+    .contacts__wrapper{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-top: 72px;
+      .sources{
+        display: grid;
+        grid-template-columns: 239px;
+        grid-template-rows: repeat(4, 43px);
+        gap: 44px 0;
+        
+        .sources__item{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 0 32px;
+          i{
+            font-size: 23px;
+            color: #0B7572;
+          }
+        }
+      }
+    }
+  }
 }
 
 
-@media only screen and (max-width: 375px){
+
+@media only screen and (max-width: 378px){
     main{
         flex-direction: column;
         .main__content{
@@ -1623,7 +1720,7 @@ main{
     }
 
     .logos{
-      margin-top: 250px;
+      margin-top: 90px;
       height: 485px;
 
       h2{
