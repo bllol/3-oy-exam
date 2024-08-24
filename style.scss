@@ -209,31 +209,47 @@ main{
   h2{
     display: none;
   }
-  .whyus-top{
+  /* .whyus-top{
     display: flex;
     justify-content: flex-end;
     max-width: 1242px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 72px;
+    margin-bottom: 72px; */
     .whyus__banner{
-      width: 1040px;
-      height: 453px;
+      /* max-width : 1040px; */
+      height: 482px;
       background-image: url(../images/truck.jpg);
+      background-size: cover;
+      position: relative;
+      margin-bottom: 72px;
 
-        &::after{
+        &::before{
           content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 58%; /* Adjust this to control the width of the triangle */
-        height: 100%;
-        background-color: #0B7572; /* Adjust to your triangle's color */
-        transform: skewX(30deg); /* Adjust this to control the angle of the triangle */
-        transform-origin: bottom left;
-        z-index: 1;
+          position: absolute;
+          width: 360px;
+          height: 0px;
+          border-left: 0px solid rgba(0,0,0,0);
+          border-right: 300px solid rgba(0,0,0,0);
+          border-bottom: 482px solid #0b7572;
       }
-    }
+
+      &::after{
+        content: "Почему с нами выгоднее?";
+        position: absolute;
+        font-family: "Exo 2";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 125%;
+        text-align: left;
+        max-width: 362px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 90px;
+        color: #fff;
+      }
+    /* } */
   }
 
   .whyus-bottom{
@@ -318,6 +334,10 @@ main{
     margin-right: 67px;
     img{
       width: 100%;
+    }
+
+    .paper__mobile{
+      display: none;
     }
   }
 
@@ -664,33 +684,47 @@ main{
       h2{
         display: none;
       }
-      .whyus-top{
+      /* .whyus-top{
         display: flex;
         justify-content: flex-end;
         max-width: 1242px;
         position: relative;
         overflow: hidden;
-        margin-bottom: 72px;
+        margin-bottom: 72px; */
         .whyus__banner{
-          width: 1040px;
-          height: 453px;
+          /* width: 1040px; */
+          height: 383px;
           background-image: url(../images/trucktablet.jpg);
           background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
     
-            &::after{
-            content: "";
+            &::before{
+              content: "";
+              position: absolute;
+              width: 290px;
+              height: 0px;
+              border-left: 0px solid rgba(0,0,0,0);
+              border-right: 240px solid rgba(0,0,0,0);
+              border-bottom: 383px solid #0b7572;
+          }
+
+          &::after{
+            content: "Почему с нами выгоднее?";
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 80%; /* Adjust this to control the width of the triangle */
-            height: 383px;
-            background-color: #0B7572; /* Adjust to your triangle's color */
-            transform: skewX(30deg); /* Adjust this to control the angle of the triangle */
-            transform-origin: bottom left;
-            z-index: 1;
+            font-family: "Exo 2";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 44px;
+            line-height: 125%;
+            max-width: 334px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 32px;
+            color: #fff;
           }
         }
-      }
+      /* } */
     
       .whyus-bottom{
         max-width: 1070px;
@@ -785,10 +819,19 @@ main{
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      img{
-        height: 687px;
-        margin-left: 0px;
-        margin-bottom: 64px;
+      padding: 64px 64px;
+
+      .clients__right{
+
+        img{
+          max-width: 687px;
+          width: 100%;
+          height: 695px;
+        }
+
+        .paper__mobile{
+          display: none;
+        }
       }
     
       .clients__content{
@@ -798,6 +841,7 @@ main{
           max-width: 477px;
           color: #fff;
           text-align: left;
+          font-size: 44px;
         }
       }
     }
@@ -997,6 +1041,112 @@ main{
     }
 }
 
+@media only screen and (max-width: 680px){
+  .clients{
+    padding: 32px 15px 32px 15px;
+    justify-content: center;
+    align-items: center;
+    .clients__right{
+      img{
+        display: none;
+      }
+
+      .paper__mobile{
+        display: block;
+        max-width: 345px;
+        width: 100%;
+        height: 507px;
+      }
+    }
+
+    .clients__content{
+      margin-top: 0px;
+      margin-bottom: 0px;
+      max-width: 400px;
+      flex: 0;
+
+      h2{
+        margin-top: 0px;
+        font-size: 38px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 620px){
+  .whyus{
+    margin-top: 100px;
+    h2{
+      display: none;
+    }
+    /* .whyus-top{
+      display: flex;
+      justify-content: flex-end;
+      max-width: 1242px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 72px; */
+      .whyus__banner{
+        /* width: 1040px; */
+        height: 383px;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        display: none;
+  
+          &::before{
+            content: "";
+            position: absolute;
+            width: 290px;
+            height: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0px;
+            display: none;
+        }
+
+        &::after{
+          content: "Почему с нами выгоднее?";
+          position: absolute;
+          font-family: "Exo 2";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 44px;
+          line-height: 125%;
+          max-width: 334px;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 32px;
+          color: #fff;
+          display: none;
+        }
+      }
+    /* } */
+  
+    .whyus-bottom{
+      max-width: 1070px;
+      height: 222px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 62px 140px;
+      margin: auto;
+      .whyus-bottom__items{
+        display: flex;
+        gap: 0 40px;
+        width: 447px;
+        height: 80px;
+        .whyus-bottom__items__txt{
+          max-width: 394px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px 0;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 375px){
     main{
         flex-direction: column;
@@ -1018,7 +1168,7 @@ main{
         }
 
         .main__img{
-            width: 345px;
+            max-width: 345px;
             height: 253px;
             background-image: url(../images/2trucksphone.jpg);
         }
@@ -1090,7 +1240,7 @@ main{
               
               .radio-card {
                 background-color: #fff;
-                width: 345px;
+                max-width: 345px;
                 padding: 25px;
                 border: 1px solid #e0e0e0;
                 border-radius: 15px;
@@ -1260,7 +1410,7 @@ main{
             display: none;
           }
           .ourworks__item__txt{
-            margin-top: 1px;
+            margin-top: 12px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -1285,16 +1435,25 @@ main{
     }
 
     .clients{
-      max-width: 375px;
-      height: 640px;
+      padding: 15px 32px;
       background-color: #0B7572;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       margin-top: 120;
-      img{
-        height: 345px;
+      
+      .clients__right{
+        img{
+          display: none;
+        }
+
+        .paper__mobile{
+          display: block;
+          max-width: 345px;
+          width: 100%;
+          height: 507px;
+        }
       }
     
       .clients__content{
@@ -1356,7 +1515,7 @@ main{
     }
 
     .logos{
-      margin-top: 220px;
+      margin-top: 270px;
       height: 485px;
 
       h2{
@@ -1434,6 +1593,8 @@ main{
           gap: 0 40px;
           position: relative;
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+          padding-bottom: 30px;
+          padding-top: 10px;
 
           .vay{
             flex-direction: row;
@@ -1517,7 +1678,7 @@ main{
         }
     
         .info-table {
-          width: 345px;
+          max-width: 345px;
           background-color: #F9F9FB;
           padding: 20px;
           border-radius: 5px;
