@@ -547,7 +547,6 @@ main{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 64px 42px;
 
     .clients__right{
       margin-right: 0px;
@@ -943,7 +942,7 @@ main{
     }
 
     .logos{
-      margin-top: 120px;
+      margin-top: 0px;
       .logos__wrapper{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1386,6 +1385,34 @@ main{
       }
     }
   }
+
+  .logos{
+    margin-top: 100px;
+    .logos__wrapper{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4,183px);
+      gap: 80px 0;
+      margin-top: 90px;
+      .logos__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        &:nth-child(odd){
+          border-right: 1px solid #D7D7DD;
+        }
+
+        img{
+          margin-bottom: 32px;
+        }
+        p{
+          margin-top: 14px;
+        }
+      }
+    }
+  }
 }
 
 
@@ -1765,7 +1792,7 @@ main{
     }
 
     .logos{
-      margin-top: 90px;
+      margin-top: 60px;
       height: 485px;
 
       h2{
@@ -1980,3 +2007,65 @@ main{
       }
     }
 }   
+
+@media only screen and (max-width: 336px){
+  .logos{
+    margin-top: 140px;
+    height: 485px;
+
+    h2{
+      font-size: 28px;
+    }
+    .logos__wrapper{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 176px);
+      gap: 80px 0;
+      margin-top: 90px;
+      .logos__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #D7D7DD;
+
+        b{
+          font-size: 18px;
+        }
+
+        p{
+          font-size: 14px;
+          text-align: center;
+        }
+
+        img{
+          margin-bottom: 32px;
+        }
+
+        .gazprom__logo{
+          width: 120px;
+        }
+
+        p{
+          margin-top: 14px;
+        }
+
+        &:nth-child(5){
+          display: none;
+        }
+
+        &:nth-child(6){
+          display: none;
+        }
+
+        &:nth-child(7){
+          display: none;
+        }
+
+        &:nth-child(8){
+          display: none;
+        }
+      }
+    }
+  }
+}
